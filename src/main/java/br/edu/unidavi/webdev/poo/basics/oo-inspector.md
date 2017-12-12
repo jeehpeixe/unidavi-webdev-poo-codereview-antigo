@@ -61,6 +61,34 @@ UDESC, Engenharia de Software, 2016.
 
 # Herança
 
+## Definições
+> É um princípio de orientação a objetos que permite que classes compartilhem atributos e métodos, através de "heranças". Sua intenção é reaproveitar código ou comportamento generalizado ou especializar operações ou atributos.  
+Wikipédia <https://pt.wikipedia.org/wiki/Herança_(programação)>
+
+> Com seu uso é possível criar classes derivadas, subclasses, a partir de classes bases, superclasses. As subclasses são mais especializadas do que as suas superclasses, mais genéricas. As subclasses herdam todas as características de suas superclasses, como suas variáveis e métodos. 
+Devmedia <http://www.devmedia.com.br/encapsulamento-polimorfismo-heranca-em-java/12991>
+
+> A utilização de heranças com interfaces é semelhante a utilização das classes propriamente ditas, porém, nelas é especificado o que deverá ser feito (métodos que deverão ser implementado), porém não é definido como será implementado. As classes que implementarem esta interface que definirão como o método irá se comportar.
+UDESC, Engenharia de Software, 2016.
+
+> A idéia de herança é evitar repetição de código. Tudo o que pode ser reaproveitado (ser genérico), deve ser feito separadamente.
+UDESC, Engenharia de Software, 2016.
+
+
+## Exemplos
+##### Caso 1 - Herança
+>https://github.com/pagseguro/java/tree/c4522e24c98ddbd9dadc704424695609fb6aba1d/source/pagseguro-api/src/br/com/uol/pagseguro/domain/direct
+
+##### Caso 2 - Herança
+>https://github.com/JanineFreitas/Jogo/tree/master/Jogo/src/jogo.
+
+##### Caso 3 - Herança
+>https://github.com/andres84/superMercadoJPA/tree/master/superMercadoJPA/src/main/java/com/mercado/modelo
+
+##### Caso 4 - Herança
+>https://github.com/Gutenbergf/Portal-De-Compras/tree/master/src/pkgClasses
+
+
 ## Ferramenta
 > Somente colocar na classe o que diz respeito a ela
 
@@ -90,6 +118,30 @@ Neste caso não houve utilização de herança. A classe Fornecedor.java possui 
 
 
 # Polimorfismo
+
+## Definições
+> Na programação orientada a objetos, o polimorfismo permite que referências de tipos de classes mais abstratas representem o comportamento das classes concretas que referenciam. Assim, é possível tratar vários tipos de maneira homogênea (através da interface do tipo mais abstrato). 
+Wikipédia <https://pt.wikipedia.org/wiki/Polimorfismo>
+
+> Princípio a partir do qual as classes derivadas de uma única classe base são capazes de invocar os métodos que, embora apresentem a mesma assinatura, comportam-se de maneira diferente para cada uma das classes derivadas. O Polimorfismo é um mecanismo por meio do qual selecionamos as funcionalidades utilizadas de forma dinâmica por um programa no decorrer de sua execução. Com o Polimorfismo, os mesmos atributos e objetos podem ser utilizados em objetos distintos, porém, com implementações lógicas diferentes. DevMedia <http://www.devmedia.com.br/conceitos-e-exemplos-polimorfismo-programacao-orientada-a-objetos/18701>
+
+> É um modo de dizer que algo ou alguma coisa pode ter diversas formas, porém, sua base é a mesma. Como por exemplo uma classe de Pagamento, que pode ser a vista ou a prazo. O funcionamento dos dois pagamento será o mesmo, porém o cálculo da prazo não terá desconto. É uma forma de dizer que a classe filha deve ter alguns métodos para funcionar corretamente, mas como esse método funcionará é uma particularidade da própria classe filha.
+UDESC, Engenharia de Software, 2016.
+
+
+## Exemplos
+##### Caso 1 - Polimorfismo
+>https://github.com/fernandogalloro/java-jogo-alientrix/tree/master/src/fernando/alientrix
+
+##### Caso 2 - Polimorfismo
+>https://github.com/Josebr1/Jogo-das-Palavras-Embaralhadas-ITA/tree/master/src/br/com/jose/embaralhador
+
+##### Caso 3 - Polimorfismo
+>https://github.com/ivanknow/venda-agua/tree/master/src/LojaAgua/controlador
+
+##### Caso 4 - Polimorfismo
+>https://github.com/pedrug19/VendaVeiculo/tree/master/src/vendaveiculo
+
 
 ## Ferramenta
 > A classe de base possui o forma como o processo funciona.
