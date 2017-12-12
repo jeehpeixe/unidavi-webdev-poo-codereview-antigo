@@ -56,3 +56,63 @@ UDESC, Engenharia de Software, 2016.
 ##### Caso 4 - Encapsulamento
 >https://github.com/pettomartino/coursera-ita-java-oo/blob/master/semana-3/src/Pizza.java 
 >Métodos e atributos não definidos como public ou private.
+
+
+
+# Herança
+
+## Ferramenta
+> Somente colocar na classe o que diz respeito a ela
+
+> Não possuir repetição de código
+
+> A classe filha deve usar todas as propriedades da classe pai
+
+> Atributos protegidos para que a classe filha possa manipular atributos da classe pai.
+
+
+## Inspeção
+##### Caso 1 - Herança
+>https://github.com/pagseguro/java/tree/c4522e24c98ddbd9dadc704424695609fb6aba1d/source/pagseguro-api/src/br/com/uol/pagseguro/domain/direct<br>
+Nas classes BoletoPaymentRequest.java, CreditCardPaymentRequest.java, foi feito herança da forma correta, onde elas estendem a classe PaymentRequest, pois as mesmas possuem a mesma base de funcionamento, somente a forma de pagamento é diferente.
+
+##### Caso 2 - Herança
+>https://github.com/JanineFreitas/Jogo/tree/master/Jogo/src/jogo<br>
+Neste caso existem as classes Peixe.java e Urso.java que estendem a classe Critatura.java. O único método usado as duas classes é o colidir(Ecossistema ecossistema, int posicaoAtual). Porém, ele foi criado como público retornado sempre false. Como ele deveria ser implementado nas classes que o implementam, deveria ter sido criado como abstrato.
+
+##### Caso 3 - Herança
+>https://github.com/andres84/superMercadoJPA/tree/master/superMercadoJPA/src/main/java/com/mercado/modelo<br>
+Neste caso não foi implementado herança onde poderia ter sido usado. Por exemplo, existem as classes Empleado.java e Cliente.java, que possuem propriedades como nome, sobrenome, endereço, telefone, entre outras que são comum entre as duas classes. Poderia ser sido feita uma classe de Pessoa com as propriedades iguais entre as duas classes, e depois nas classes filhas somente as propriedades diferentes entre as duas.
+
+##### Caso 4 - Herança
+>https://github.com/Gutenbergf/Portal-De-Compras/tree/master/src/pkgClasses<br>
+Neste caso não houve utilização de herança. A classe Fornecedor.java possui as propriedades de login e senha, que se resumem a classe de Usuario.java, que é formada por somente essas duas propriedades. Portanto, a classe de Fornecedor.java poderia facilmente ser uma extensão da classe de Usuario.java.
+
+
+# Polimorfismo
+
+## Ferramenta
+> A classe de base possui o forma como o processo funciona.
+
+> A classe filha implementa as regras do funcionamento definido nos processos da classe base.
+
+> Os métodos da classe pai devem/podem ser construídos na classe filha
+
+
+## Inspeção
+##### Caso 1 - Polimorfismo
+>https://github.com/fernandogalloro/java-jogo-alientrix/tree/master/src/fernando/alientrix<br>
+Neste caso, as classes Nave.java, Inimigo.java e Missel.java estendem a classe Movel.java, onde os métodos foram criados corretamente como abstratos e as propriedades protegidas.
+
+##### Caso 2 - Polimorfismo
+>https://github.com/Josebr1/Jogo-das-Palavras-Embaralhadas-ITA/tree/master/src/br/com/jose/embaralhador<br>
+Neste caso, as classes PalavraInversa.java e PalavraTrocaParImpart.java implementam a interface Embaralhador.lava, que por sua vez possui o método de embaralhar que deve ser implementado pelas classes que o implementam, o que está correto.
+
+##### Caso 3 - Polimorfismo
+>https://github.com/ivanknow/venda-agua/tree/master/src/LojaAgua/controlador<br>
+Neste caso, o AbstractController.php foi utilizado para fazer o DAO padrão, e as classes de PedidoController.php e UsuarioController.php implementaram o processo de inclusão do registro. O DAO padrão faz o tratamento dos dados, e as classes que o implementam dizem como é feito o processo de inclusão.
+
+##### Caso 4 - Polimorfismo
+>https://github.com/pedrug19/VendaVeiculo/tree/master/src/vendaveiculo<br>
+Neste caso, a classe abstrata Vendedor.java foi criada corretamente com as propriedades protegidas e com os dados padrões, e suas filhas VendedorGerente, VendedorJunior e VendedorSenior implementam suas particularidades, e são obrigadas a implementar o método verTudo() para exibir os dados conforme o tipo do vendedor.
+Somente os getters e setters de todas as propriedades não deveriam ter sido feitos, pois não são utilizados.
