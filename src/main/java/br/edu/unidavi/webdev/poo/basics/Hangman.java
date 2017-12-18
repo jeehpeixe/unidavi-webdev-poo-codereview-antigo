@@ -1,7 +1,7 @@
 package br.edu.unidavi.webdev.poo.basics;
 
-public class Hangman {
- 	
+public class Hangman extends Jogo<String, Character> {
+	
     private String pass = "";
     private char[] placeholder;
     private boolean gotcha = false;
@@ -9,7 +9,7 @@ public class Hangman {
     private int limit = 6;
     private boolean canPlay = false;
 
-    public Hangman(String palavra) {
+    public Hangman(String palavra)  {
         this.pass = palavra;
         iniciar();
     }
@@ -17,14 +17,15 @@ public class Hangman {
     public void iniciar() {
         this.placeholder = new char[this.pass.length()];
         for (int i = 0; i < this.pass.length(); i++)
-                this.placeholder[i] = '*';
+            this.placeholder[i] = '*';
         this.gotcha = false;
         this.wrongs = 0;
         this.limit = 6;
         this.canPlay = true;
     }
- 	
-    public String jogar(char letra) { 
+	
+    @Override
+    public String jogar(Character letra) {
         if (this.canPlay) {
             boolean hit = false;
             for (int i = 0; i < this.pass.length(); i++) {
@@ -33,9 +34,6 @@ public class Hangman {
                     hit = true;
                 }
             }
-            //if (String.valueOf(this.placeholder).equals(this.pass)) {
-            //	this.gotcha = true;
-            //}
             this.gotcha = String.valueOf(this.placeholder).equals(this.pass);
             if (!hit) {
                 addWrong();
@@ -44,7 +42,7 @@ public class Hangman {
         }
         return String.valueOf(placeholder);
     }
-
+	
     public boolean isGotcha() {
         return this.gotcha;
     }
@@ -52,16 +50,17 @@ public class Hangman {
     public void addWrong() {
         this.wrongs++;
     }
- 	
+
     public int getWrongAttempts() {
         return this.wrongs;
     }
 
+    @Override
     public boolean won() {
         return this.gotcha;
     }
- 
- 	
+
+	
     /*
     public static void main(String[] args) {
         //
@@ -95,7 +94,6 @@ public class Hangman {
         } while (canPlay);
         scanner.close();
         System.out.println("You ".concat(gotcha ? " win" : " lose"));
-
     }
     */
- }
+}
